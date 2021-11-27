@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online IDE</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+
+    <div class="header">Online IDE </div>
+    <div class="control-panel">
+        <label for="languages">
+            Select Language:
+        </label>
+        &nbsp; &nbsp;
+        <select id="languages" class="languages" onchange="changeLanguage()">
+            <option value="c"> C </option>
+            <option value="cpp"> C++ </option>
+            <option value="php"> PHP </option>
+            <option value="python"> Python </option>
+            <option value="node"> Node JS </option>
+        </select>
+    </div>
+    <div class="editor" id="editor"></div>
+
+    <div class="button-container">
+        <button class="btn" onclick="executeCode()"> Run </button>
+    </div>
+
+    <div class="output"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="js/ide.js"></script>
+
+</body>
+</html>
